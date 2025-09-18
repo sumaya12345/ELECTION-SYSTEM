@@ -7,13 +7,13 @@ import { Routes, Route } from "react-router-dom";
 // Public routes
 import Home from "./Pages/home/Home";
 import Login from "./Pages/home/Login";
-import Register from "./Pages/Home/Register";
+import Register from "./Pages/home/Register";
 import About from "./Pages/Home/about";
 import Contact from "./Pages/home/Contact";
 import Candidates from "./Pages/canditate/canditates";
 import ActiveElectionsPage from "./Components/active_election";
 import CandidateActiveElections from "./Pages/canditate/CandidateActiveElections";
-import CandidateLogin from "./Pages/Home/CandidateLogin"
+import CandidateLogin from "./Pages/home/CandidateLogin"
 // Admin routes
 import AdminLogin from "./Pages/admin/AdminLogin";
 import AdminDashboard from "./Pages/admin/adminDashboard";
