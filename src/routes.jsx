@@ -8,7 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/home/Home";
 import Login from "./Pages/home/Login";
 import Register from "./Pages/home/Register";
-import About from "./Pages/Home/about";
+import About from "./Pages/home/about";
 import Contact from "./Pages/home/Contact";
 import Candidates from "./Pages/canditate/canditates";
 import ActiveElectionsPage from "./Components/active_election";
