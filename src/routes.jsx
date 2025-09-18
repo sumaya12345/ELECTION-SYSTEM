@@ -5,7 +5,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 // Public routes
-import Home from "./Pages/ome/Home";
+import Home from "./Pages/home/Home";
 import Login from "./Pages/Home/Login";
 import Register from "./Pages/Home/Register";
 import About from "./Pages/Home/about";
