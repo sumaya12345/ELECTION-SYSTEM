@@ -48,7 +48,7 @@ const AdminElections = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/elections");
+        const response = await axios.get("https://elrction-backend-4.onrender.com/elections");
         const electionsWithStatus = response.data.map((election) => ({
           ...election,
           status: election.status || "upcoming",
@@ -100,7 +100,7 @@ const AdminElections = () => {
 
     try {
       setIsLoading(true);
-      const response = await axios.post("http://localhost:5000/elections", {
+      const response = await axios.post("https://elrction-backend-4.onrender.com/elections", {
         name: newElection.name,
         position: newElection.position,
         startDate: newElection.startDate,
@@ -132,7 +132,7 @@ const AdminElections = () => {
       setIsLoading(true);
       let newStatus = currentStatus === "active" ? "inactive" : "active";
 
-      await axios.put(`http://localhost:5000/elections/${id}/status`, {
+      await axios.put(`https://elrction-backend-4.onrender.com/elections/${id}/status`, {
         status: newStatus,
       });
 
@@ -156,7 +156,7 @@ const AdminElections = () => {
 
     try {
       setIsLoading(true);
-      await axios.delete(`http://localhost:5000/elections/${id}`);
+      await axios.delete(`https://elrction-backend-4.onrender.com/elections/${id}`);
       setElections(elections.filter((election) => election._id !== id));
     } catch (err) {
       console.error("Error deleting election:", err);

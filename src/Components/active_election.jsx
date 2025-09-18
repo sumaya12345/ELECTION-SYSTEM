@@ -67,7 +67,7 @@ const ActiveElection = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/candidates/vote/${candidateId}`,
+        `https://elrction-backend-4.onrender.com/candidates/vote/${candidateId}`,
         { 
           userId: userData._id,
           electionId
@@ -127,7 +127,7 @@ const ActiveElection = () => {
       setError(null);
       
       // Get active elections
-      const electionsRes = await axios.get('http://localhost:5000/elections/active', {
+      const electionsRes = await axios.get('https://elrction-backend-4.onrender.com/elections/active', {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -139,7 +139,7 @@ const ActiveElection = () => {
       await Promise.all(electionsData.map(async (election) => {
         try {
           const candidatesRes = await axios.get(
-            `http://localhost:5000/candidates/${election._id}`,
+            `https://elrction-backend-4.onrender.com/candidates/${election._id}`,
             {
               headers: {
                 "Authorization": `Bearer ${token}`

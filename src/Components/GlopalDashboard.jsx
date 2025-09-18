@@ -36,17 +36,17 @@ function GlopalDashboard({ userType = 'admin' }) {
         // Fetch data based on user type
         const endpoints = {
           admin: [
-            'http://localhost:5000/api/dashboard/stats',
-            'http://localhost:5000/api/dashboard/active-elections',
-            'http://localhost:5000/api/dashboard/voting-progress'
+            'https://elrction-backend-4.onrender.com/api/dashboard/stats',
+            'https://elrction-backend-4.onrender.com/api/dashboard/active-elections',
+            'https://elrction-backend-4.onrender.com/api/dashboard/voting-progress'
           ],
           candidate: [
-            'http://localhost:5000/api/candidate/stats',
-            'http://localhost:5000/api/candidate/active-elections'
+            'https://elrction-backend-4.onrender.com/api/candidate/stats',
+            'https://elrction-backend-4.onrender.com/api/candidate/active-elections'
           ],
           voter: [
-            'http://localhost:5000/api/voter/stats',
-            'http://localhost:5000/api/voter/active-elections'
+            'https://elrction-backend-4.onrender.com/api/voter/stats',
+            'https://elrction-backend-4.onrender.com/api/voter/active-elections'
           ]
         };
 

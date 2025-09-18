@@ -51,7 +51,7 @@ const AdminCandidates = () => {
   useEffect(() => {
     const fetchElections = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/elections");
+        const response = await axios.get("https://elrction-backend-4.onrender.com/elections");
         const activeElections = response.data.filter(
           (election) => election.status === "active"
         );
@@ -94,7 +94,7 @@ const AdminCandidates = () => {
       formData.append("photo", newCandidate.photo);
 
       const response = await axios.post(
-        "http://localhost:5000/candidates/register",
+        "https://elrction-backend-4.onrender.com/candidates/register",
         formData,
         {
           headers: {
@@ -134,7 +134,7 @@ const AdminCandidates = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5000/candidates/${id}`
+        `https://elrction-backend-4.onrender.com/candidates/${id}`
       );
       if (response.status === 200) {
         const updatedCandidates = candidates.filter(

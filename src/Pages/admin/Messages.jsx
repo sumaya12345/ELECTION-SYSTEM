@@ -27,7 +27,7 @@ function Messages() {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/complaints');
+        const response = await axios.get('https://elrction-backend-4.onrender.com/complaints');
         setComplaints(response.data);
         setLoading(false);
       } catch (err) {

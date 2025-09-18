@@ -65,7 +65,7 @@ function ResultsCom() {
       setLoading(true);
       setError(null);
       
-      const electionsRes = await axios.get('http://localhost:5000/elections/active', {
+      const electionsRes = await axios.get('https://elrction-backend-4.onrender.com/elections/active', {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -76,7 +76,7 @@ function ResultsCom() {
       await Promise.all(electionsData.map(async (election) => {
         try {
           const resultsRes = await axios.get(
-            `http://localhost:5000/elections/${election._id}/results`,
+            `https://elrction-backend-4.onrender.com/elections/${election._id}/results`,
             {
               headers: {
                 "Authorization": `Bearer ${token}`

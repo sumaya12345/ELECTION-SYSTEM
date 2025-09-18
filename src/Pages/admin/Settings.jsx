@@ -36,7 +36,7 @@ function Settings() {
 
     try {
       const response = await axios.put(
-        'http://localhost:5000/admin/update-password',
+        'https://elrction-backend-4.onrender.com/admin/update-password',
         {
           username: formData.username,
           currentPassword: formData.currentPassword,

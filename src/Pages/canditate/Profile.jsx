@@ -48,7 +48,7 @@ function Profile() {
           return;
         }
 
-        const response = await axios.get(`http://localhost:5000/profile/candidate/${candidateId}`);
+        const response = await axios.get(`https://elrction-backend-4.onrender.com/profile/candidate/${candidateId}`);
         
         if (response.data.success) {
           const profileData = response.data.candidate || response.data.profile || {};

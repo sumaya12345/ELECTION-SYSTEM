@@ -43,7 +43,7 @@ function AdminLogin() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/admin/login', formData);
+      const response = await axios.post('https://elrction-backend-4.onrender.com/admin/login', formData);
       
       if (response.data.success) {
         localStorage.setItem('admin', JSON.stringify(response.data.admin));
